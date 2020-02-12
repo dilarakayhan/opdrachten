@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Practice Event Handlers</title>
+    <style>
+        .blue-background {
+            background-color: blue;
+        }
+
+        .red-background {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body class="blue-background">
+    <button id="mybutton" type="button" class="btn-alert">Alert Me!</button>
+    <button id="color-button" type="button" class="btn-alert">Change Background Color</button>
+
+    <script>
+        const btn = function () {
+            const alertBtn = document.querySelector("#mybutton");
+            alertBtn.addEventListener("click", function () {
+                alert("button clicked");
+            })
+        }
+
+        const bgBlue = function () {
+            const bodyElement = document.body;
+            bodyElement.classList.toggle("red-background");
+        }
+
+        const bgRed = function () {
+            const toggleColor = document.querySelector("#color-button");
+            toggleColor.addEventListener("click", function () {
+                bgBlue();
+            })
+        }
+
+        document.addEventListener('DOMContentLoaded', function (event) {
+            btn();
+            bgRed();
+        })
+
+    </script>
+</body>
+
+</html>
