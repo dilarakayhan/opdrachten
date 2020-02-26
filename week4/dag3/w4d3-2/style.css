@@ -1,0 +1,39 @@
+#first:hover {
+    color: lightblue;
+    font-weight: bold;
+}
+
+#second:active {
+    color: red;
+    font-style: italic;
+}
+
+/* De :visited functie werkt niet meer met bepaalde elements door css security exploit. */
+#third:visited{
+    color: darkorange;
+    text-decoration: line-through;
+}
+
+#input-field:focus{
+    color: green;
+    font-size: 20px;
+    border: 2px aqua solid;
+}
+
+li {
+    display: inline-flex;
+    margin-right: 20px;
+}
+
+ul {
+    background-color: #435570;
+    padding: 20px;
+}
+
+.currentPage {
+    background-color: #8188AC;
+}
+
+a:hover{
+    background-color: #95A8FF;
+}
